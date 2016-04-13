@@ -1,0 +1,172 @@
+@import 'vars';
+
+html {
+  @media (min-width: $break-sm) {
+    font-size: 16px;
+  }
+  @media (min-width: $break-md) {
+    font-size: 16px;
+  }
+  @media (min-width: $break-lg) {
+    font-size: 17px;
+  }
+  @media (min-width: $break-xl) {
+    font-size: 18px;
+  }
+}
+
+body {
+  background-color: $color-primary;
+  color: $color-primary-contrast;
+  font-family: 'Montserrat', 'Helvetica';
+  font-weight: $font-weight-normal;
+  line-height: 1.65;
+}
+
+section {
+  margin-bottom: 2em;
+
+  &:before {
+    // Invisible section padding to move #id link targets below navbar
+    content: "";
+    display: block;
+    height: 4em;
+    margin: -4em 0 0;
+  }
+}
+
+a {
+  border-bottom: 1px dotted $color-primary-contrast;
+  color: $color-primary-contrast;
+  text-decoration: none;
+  &:visited {
+    border-bottom: 1px dotted darken($color-primary-contrast, 30%);
+    color: $color-primary-contrast;
+  }
+  &:hover {
+    border-bottom: 1px dotted lighten($color-primary-contrast, 30%);
+    color: lighten($color-primary-contrast, 30%);
+  }
+  &:active {
+    border-bottom: 1px dotted lighten($color-primary-contrast, 30%);
+    color: lighten($color-primary-contrast, 30%);
+  }
+}
+
+strong, b {
+  font-weight: $font-weight-bold;
+}
+
+em, i {
+  font-style: italic;
+}
+
+p {
+  margin: 0 0 1em 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 1rem 0;
+  color: $color-primary-contrast;
+  font-weight: $font-weight-bold;
+  line-height: 1.2;
+}
+
+header {
+  h1, h2, h3, h4, h5, h6 {
+    + p {
+      color: $color-primary-contrast-alt;
+    }
+
+    > span.subtitle {
+      color: $color-primary-contrast-alt;
+      font-size: 0.7em;
+      font-weight: $font-weight-normal;
+    }
+  }
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2.3em;
+}
+
+h3 {
+  font-size: 1.8em;
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
+h5 {
+  font-size: 1.2em;
+}
+
+h6 {
+  font-size: 1em;
+}
+
+blockquote {
+  margin: 0 0 1em 0;
+  padding: 0 0 0 1em;
+  border-left: 5px solid #eee;
+  font-style: italic;
+}
+
+code {
+  margin: 0 0.25em;
+  padding: 0.25em 0.65em;
+  border-radius: $border-radius;
+  background: $color-secondary;
+  color: $color-secondary-contrast;
+  font-family: monospace;
+  font-size: 0.9em;
+}
+
+pre {
+  code {
+    display: block;
+    padding: 1em 1.5em;
+    overflow-x: auto;
+    line-height: 1.75em;
+  }
+}
+
+hr {
+  margin: 2em 0;
+  border: none;
+  border-bottom: 2px solid $color-primary-contrast-alt;
+  &.strong {
+    border-bottom: 3px solid $color-primary-contrast;
+  }
+}
+
+footer {
+  hr {
+    margin-bottom: 1em;
+  }
+}
+
+.text-left { text-align: left; }
+
+.text-center { text-align: center; }
+
+.text-right { text-align: right; }
+
+.img-r {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.img-rounded {
+  border-radius: $border-radius;
+}
+
+.img-circle {
+  border-radius: 50%;
+}

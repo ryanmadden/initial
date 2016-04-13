@@ -1,0 +1,27 @@
+table {
+  margin: 0 0 1em 0;
+  width: 100%;
+  max-width: 100%;
+  background-color: transparent;
+  border-spacing: 0;
+  border-collapse: collapse;
+
+  thead > tr > th {
+    padding: 0.5em;
+    border-bottom: 2px solid $color-secondary-contrast;
+  }
+
+  tbody > tr > td {
+    padding: 0.5em;
+    border-bottom: 1px solid $color-secondary-contrast;
+
+  }
+
+  th {
+    text-align: left;
+  }
+
+  &.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: $color-secondary;
+  }
+}

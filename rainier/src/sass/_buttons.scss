@@ -1,0 +1,81 @@
+@import 'vars';
+
+input[type="submit"],
+input[type="button"],
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0 2.75em;
+  min-width: 10em;
+  border-radius: $border-radius;
+  font-size: 0.8em;
+  letter-spacing: 1px; 
+  line-height: 3em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &.btn-lg {
+    font-size: 1.2em;
+  }
+
+  &.btn-icon:before {
+    margin-right: 0.4em;
+    font-family: FontAwesome;
+  }
+  
+  &.btn-default {
+    background-color: $color-primary;
+    border: 1px solid $color-primary-contrast;
+    color: $color-primary-contrast;
+    &:hover {
+      border: 1px solid lighten($color-primary-contrast, 30%);
+      color: lighten($color-primary-contrast, 30%);
+    }
+
+    &:active {
+      background-color: darken($color-primary, 5%);
+    }
+  }
+
+  &.btn-alt {
+    background-color: $color-primary-contrast;
+    border: none;
+    color: $color-primary;
+    &:hover {
+      background-color: lighten($color-primary-contrast, 5%);
+    }
+
+    &:active {
+      background-color: darken($color-primary-contrast, 5%);
+    }
+  }
+
+  &.btn-action {
+    background-color: $color-action;
+    border: none;
+    color: $color-action-contrast;
+    &:hover {
+      background-color: lighten($color-action, 5%);
+    } 
+
+    &:active {
+      background-color: darken($color-action, 5%);
+    }
+  }
+
+  &.btn-plain {
+    background-color: transparent;
+    border: none;
+  }
+
+  &.btn-disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+}
